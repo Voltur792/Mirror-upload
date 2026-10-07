@@ -1,0 +1,17 @@
+# Build artifacts
+*.astraplugin
+
+__pycache__/
+*.pyc
+.venv/
+
+data/
+.test-state/
+.test-data/
+.preview/
+test-results/
+AGENTS.md
+build/
+dist/
+*.spec
+.native-build/

@@ -1,0 +1,1460 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-07",
+  "os": "windows",
+  "arch": "x86_64",
+  "python": "3.13",
+  "registry_plugins": [
+    {
+      "id": "bad-apple",
+      "version": "0.1.2",
+      "runtimes": [],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": false,
+      "source_repository": "mihailinl/AstraPlugins"
+    },
+    {
+      "id": "companion-cat",
+      "version": "0.1.7",
+      "runtimes": [],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": false,
+      "source_repository": "mihailinl/AstraPlugins"
+    },
+    {
+      "id": "denchik-vroid-manager",
+      "version": "1.1.7",
+      "runtimes": [
+        "node"
+      ],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "denchik2444/vrm-manager"
+    },
+    {
+      "id": "dice-roller",
+      "version": "0.1.3",
+      "runtimes": [],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": false,
+      "source_repository": "mihailinl/astra-dice-roller"
+    },
+    {
+      "id": "doom",
+      "version": "0.1.3",
+      "runtimes": [],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": false,
+      "source_repository": "mihailinl/AstraPlugins"
+    },
+    {
+      "id": "dwertyfa-astra-tg",
+      "version": "0.1.14",
+      "runtimes": [
+        "node"
+      ],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "dwertyfa288/dwertyfa-astra-tg"
+    },
+    {
+      "id": "json-tools",
+      "version": "0.1.2",
+      "runtimes": [
+        "node"
+      ],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "mihailinl/AstraPlugins"
+    },
+    {
+      "id": "knowledge-graph",
+      "version": "0.2.0",
+      "runtimes": [
+        "python"
+      ],
+      "profile": "knowledge-graph-0.2.0",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "Belnash3/knowledge-graph",
+      "requirements_hashes": {
+        "requirements.lock": "d7888eb27b1f6bc03c665620f71a0af4c22596535987c7b16302f0acf443c314",
+        "requirements.txt": "f03ed42343d224afe1fcf4490d56f1abc44987244f3939a86903598259949705"
+      }
+    },
+    {
+      "id": "minecraft-for-astra",
+      "version": "0.3.3",
+      "runtimes": [
+        "node"
+      ],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "teletemagame-dev/minecraft-for-astra"
+    },
+    {
+      "id": "sleep-pause-timer",
+      "version": "0.4.0",
+      "runtimes": [
+        "python"
+      ],
+      "profile": "sleep-pause-timer-0.4.0",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "Voltur792/SPT",
+      "requirements_hashes": {
+        "requirements.txt": "9b8de31431acb16eeda24d0a47556d452445ff639e9aaa8a15b32e0088b8e92c"
+      }
+    },
+    {
+      "id": "sub-models-for-astra",
+      "version": "0.14.0",
+      "runtimes": [
+        "node"
+      ],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "teletemagame-dev/sub-models-for-astra",
+      "extra_providers": [
+        "codex",
+        "gemini",
+        "claude"
+      ]
+    },
+    {
+      "id": "telegram-client",
+      "version": "0.2.0",
+      "runtimes": [],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": false,
+      "source_repository": "mihailinl/AstraPlugins"
+    },
+    {
+      "id": "text-utils",
+      "version": "0.1.3",
+      "runtimes": [
+        "python"
+      ],
+      "profile": "text-utils-0.1.3",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "mihailinl/AstraPlugins",
+      "requirements_hashes": {
+        "requirements.txt": "ed3d2e1065167ec6fe71c95cbe897650777521bdde5335a0ff90e81198c69a0b"
+      }
+    },
+    {
+      "id": "voice-text-input",
+      "version": "1.1.0",
+      "runtimes": [
+        "python"
+      ],
+      "source_repository": "Voltur792/voice-text-input",
+      "release_tag": "v1.1.0",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": "voice-text-input-1.1.0",
+      "requirements_hashes": {
+        "requirements.lock": "e778906f4840ffb25690b45902a37daafa65d0fca45e0d3da4fcc982ce505b75",
+        "requirements.txt": "13629b9f30710bde78ddad4acede7976b34fe3a52ed5f78aa3e9f53e4f8c5e03"
+      }
+    },
+    {
+      "id": "web-stt",
+      "version": "0.6.0",
+      "runtimes": [],
+      "profile": null,
+      "extra_models": [],
+      "external_packages_needed": false,
+      "source_repository": "LilKALINOV/Astra-Google-STT"
+    },
+    {
+      "id": "yandex-smart-home",
+      "version": "0.1.4",
+      "runtimes": [
+        "python"
+      ],
+      "profile": "yandex-smart-home-0.1.4",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "source_repository": "Voltur792/Y-home-f-astra",
+      "requirements_hashes": {
+        "requirements.txt": "b4fd154eb7ae6d85ae1f5901c22350d51694e37350dd3f12d2c2d4755ba61f65"
+      }
+    },
+    {
+      "id": "discord-voice-bridge",
+      "version": "1.1.3",
+      "runtimes": [
+        "node"
+      ],
+      "source_repository": "Voltur792/VC-Discord",
+      "release_tag": "v1.1.3",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": null
+    },
+    {
+      "id": "music-controller",
+      "version": "1.1.7",
+      "runtimes": [
+        "python",
+        "node"
+      ],
+      "source_repository": "Voltur792/astra-music",
+      "release_tag": "v1.1.7",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": "music-controller-1.1.7",
+      "requirements_hashes": {
+        "requirements.lock": "76e86cd2d5d8aa3b6544f9f3a87493076ff17d0981c7438fe2c6e39e2d05ec2c",
+        "requirements.txt": "d2c3d841b5c03b7273b67af1a7535340246bd035c3218ffbd81722d07b62779f"
+      }
+    },
+    {
+      "id": "sleep-pause-timer",
+      "version": "1.1.2",
+      "runtimes": [
+        "python"
+      ],
+      "source_repository": "Voltur792/SPT",
+      "release_tag": "v1.1.2",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": "sleep-pause-timer-1.1.2",
+      "requirements_hashes": {
+        "requirements.txt": "9b8de31431acb16eeda24d0a47556d452445ff639e9aaa8a15b32e0088b8e92c"
+      }
+    },
+    {
+      "id": "auto-assistant",
+      "version": "1.0.0",
+      "runtimes": [
+        "python"
+      ],
+      "source_repository": "Voltur792/auto-assistant",
+      "release_tag": "v1.0.0",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": "auto-assistant-1.0.0",
+      "requirements_hashes": {
+        "requirements.lock": "2c598ecf594f90167d6de69ea09125c477b92ca0699ac8a7d5fe12e3d8e866d0",
+        "requirements.txt": "9b8de31431acb16eeda24d0a47556d452445ff639e9aaa8a15b32e0088b8e92c"
+      }
+    },
+    {
+      "id": "sea-battle",
+      "version": "0.3.4",
+      "runtimes": [
+        "python"
+      ],
+      "source_repository": "Voltur792/astra-sea-battle",
+      "release_tag": "v0.3.4",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": "sea-battle-0.3.4",
+      "requirements_hashes": {
+        "requirements.lock": "ee5ee34aaba4bf5bbf1272e4a8ddd5f884719d9ee615261a04233b00b9d0e372",
+        "requirements.txt": "8989dbfcfcc388f4a73de7a60d41a8e3e7591abdf43d0efad24fb18b4b28b4f5"
+      }
+    },
+    {
+      "id": "detective-game",
+      "version": "0.3.4",
+      "runtimes": [
+        "python"
+      ],
+      "source_repository": "Voltur792/detective-game",
+      "release_tag": "v0.3.4",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": "detective-game-0.3.4",
+      "requirements_hashes": {
+        "requirements.lock": "ee5ee34aaba4bf5bbf1272e4a8ddd5f884719d9ee615261a04233b00b9d0e372",
+        "requirements.txt": "8989dbfcfcc388f4a73de7a60d41a8e3e7591abdf43d0efad24fb18b4b28b4f5"
+      }
+    },
+    {
+      "id": "yandex-smart-home",
+      "version": "0.5.1",
+      "runtimes": [
+        "python"
+      ],
+      "source_repository": "Voltur792/Y-home-f-astra",
+      "release_tag": "v0.5.1",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": "yandex-smart-home-0.5.1",
+      "requirements_hashes": {
+        "requirements.lock": "0a6572b4862dce35f1707bb8d190cc25ea2c680fd9772244adf5631b093d81a8",
+        "requirements.txt": "69cdc52b8dd546f548da8d5eff2eb9b2f0d7acd8e69968d8835eac3847d4fa83"
+      }
+    },
+    {
+      "id": "browser-control",
+      "version": "0.1.30",
+      "runtimes": [
+        "python"
+      ],
+      "source_repository": "Voltur792/browser-control",
+      "release_tag": "v0.1.30",
+      "extra_models": [],
+      "external_packages_needed": true,
+      "profile": "browser-control-0.1.30",
+      "requirements_hashes": {
+        "requirements.lock": "8aa54fcc3896598eaf93a9966d372aac25bdb8d68fe79e8e66fdbc76c3792b3d",
+        "requirements.txt": "9b8de31431acb16eeda24d0a47556d452445ff639e9aaa8a15b32e0088b8e92c"
+      }
+    }
+  ],
+  "wheels": [
+    {
+      "path": "wheels/aiofiles-25.1.0-py3-none-any.whl",
+      "name": "aiofiles",
+      "version": "25.1.0",
+      "size": 14668,
+      "sha256": "abe311e527c862958650f9438e859c1fa7568a141b22abcd015e120e86a85695",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/bc/8a/340a1555ae33d7354dbca4faa54948d76d89a27ceef032c8c3bc661d003e/aiofiles-25.1.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/aiohappyeyeballs-2.7.1-py3-none-any.whl",
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "size": 15038,
+      "sha256": "9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/aiohttp-3.14.3-cp313-cp313-win_amd64.whl",
+      "name": "aiohttp",
+      "version": "3.14.3",
+      "size": 476518,
+      "sha256": "dff9461ec275f22135650d5ba4b4931a11f3958df7dfbb8db630000d4dee0883",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/9d/69/3d876ac02659f271cf7f6769f14a8e3de5b6e888ed8b5a7e998086a4cec8/aiohttp-3.14.3-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/aiosignal-1.4.0-py3-none-any.whl",
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "size": 7490,
+      "sha256": "053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/anyio-4.15.1-py3-none-any.whl",
+      "name": "anyio",
+      "version": "4.15.1",
+      "size": 132079,
+      "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/astra_plugin_sdk-0.5.0-py3-none-any.whl",
+      "name": "astra-plugin-sdk",
+      "version": "0.5.0",
+      "size": 194447,
+      "sha256": "185330241e5f41e7340714feca28074031a5ff32ee50efc264968a14588782ae",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/76/93/d58f1697a11d10e11f4ed4d171f8d6fd222e3e660411ed40d0a130cc04c0/astra_plugin_sdk-0.5.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/astra_plugin_sdk-0.6.1-py3-none-any.whl",
+      "name": "astra-plugin-sdk",
+      "version": "0.6.1",
+      "size": 225796,
+      "sha256": "b712977ee6c55a611ead81dd3ed5fe08732013e9b108bb79f92cfc8c0a64ccb7",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/62/47/a03788a3ef0a9ef8ebd622d2dab62a42a34d8e9f1688d9298c952d5ed17d/astra_plugin_sdk-0.6.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/astra_plugin_sdk-0.6.2-py3-none-any.whl",
+      "name": "astra-plugin-sdk",
+      "version": "0.6.2",
+      "size": 248325,
+      "sha256": "6aa7c5028079d97b3479e0e2de8bd12f7db2f6a23e791a12f5d55086d9902054",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/b3/ca/7108e0d9ff480ec858bc71538575a073e291574e9c9666da84b51b2b0c88/astra_plugin_sdk-0.6.2-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/attrs-26.1.0-py3-none-any.whl",
+      "name": "attrs",
+      "version": "26.1.0",
+      "size": 67548,
+      "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/av-19.0.1-cp312-abi3-win_amd64.whl",
+      "name": "av",
+      "version": "19.0.1",
+      "size": 28149519,
+      "sha256": "906fc3db09288319a75ea23ffefb59961c7dbe0d1c074601507a89de7d8593d8",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/e6/dc/a87a5a5e3ac462734f9befd8bad1447301e5802d8c111e22bf708fba7af3/av-19.0.1-cp312-abi3-win_amd64.whl"
+    },
+    {
+      "path": "wheels/bottle-0.13.4-py2.py3-none-any.whl",
+      "name": "bottle",
+      "version": "0.13.4",
+      "size": 103807,
+      "sha256": "045684fbd2764eac9cdeb824861d1551d113e8b683d8d26e296898d3dd99a12e",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/83/f6/b55ec74cfe68c6584163faa311503c20b0da4c09883a41e8e00d6726c954/bottle-0.13.4-py2.py3-none-any.whl"
+    },
+    {
+      "path": "wheels/certifi-2026.7.22-py3-none-any.whl",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "size": 136983,
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/cffi-2.1.1-cp313-cp313-win_amd64.whl",
+      "name": "cffi",
+      "version": "2.1.1",
+      "size": 185688,
+      "sha256": "1aa5645c30469b09530c4ebca77ebf8f17618293c58f8549cb1a543a50236e7d",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/60/a6/8b149b2c3f2e11aaa1618ef64500b45f50f22c57a977a4dff1aff1f91042/cffi-2.1.1-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/charset_normalizer-3.5.1-cp313-cp313-win_amd64.whl",
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "size": 199295,
+      "sha256": "aea996a6aba25260827c9ea511d1addfde2da9eb686ac961838509086188b7e6",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/8a/33/56d97ade41c8db611e727168c52ae46c9224c362ec28d4b65d7e9869e8da/charset_normalizer-3.5.1-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/charset_normalizer-3.5.2-cp313-cp313-win_amd64.whl",
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "size": 206489,
+      "sha256": "78456a747de8dc58360ffa581f30a002baf5aa28cb262536545e91f113ed7639",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/9c/76/b8ec57f4e9ee3253541abf95e4a462c0175fe8032dcd070f1f2421240942/charset_normalizer-3.5.2-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/click-8.5.0-py3-none-any.whl",
+      "name": "click",
+      "version": "8.5.0",
+      "size": 125251,
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/clr_loader-0.3.1-py3-none-any.whl",
+      "name": "clr_loader",
+      "version": "0.3.1",
+      "size": 55730,
+      "sha256": "cbad189de20d202a7d621956b0fc38049e13c9bf7ca2923441eff725cd121aa1",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/5e/da/ec1a6e36624000b6df0dd61183c42342ee5814c073315e802cadaad04d2f/clr_loader-0.3.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/colorama-0.4.6-py2.py3-none-any.whl",
+      "name": "colorama",
+      "version": "0.4.6",
+      "size": 25335,
+      "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl"
+    },
+    {
+      "path": "wheels/ctranslate2-4.8.2-cp313-cp313-win_amd64.whl",
+      "name": "ctranslate2",
+      "version": "4.8.2",
+      "size": 19222061,
+      "sha256": "399c20a7336b6358f69ce3c615e090eabc08f29735a079fd1ac1e464119e0861",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/c2/fc/a9e9e0ce1c0a29bc4c17bf56ccb4274293c0bbb2b8aae561727d82fcb0ca/ctranslate2-4.8.2-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/faster_whisper-1.2.1-py3-none-any.whl",
+      "name": "faster-whisper",
+      "version": "1.2.1",
+      "size": 1118909,
+      "sha256": "79a66ad50688c0b794dd501dc340a736992a6342f7f95e5811be60b5224a26a7",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/05/99/49ee85903dee060d9f08297b4a342e5e0bcfca2f027a07b4ee0a38ab13f9/faster_whisper-1.2.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/filelock-4.0.12-py3-none-any.whl",
+      "name": "filelock",
+      "version": "4.0.12",
+      "size": 111732,
+      "sha256": "5f17ee83ecee8a6f3e389c75822fb70a1c2f0506b99438a6dffa1d56793588c8",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/da/a1/b047e1c486a2c66283633b7dbb73872ca16ca1ce6a426f70d4d037fc8e1c/filelock-4.0.12-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "size": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl"
+    },
+    {
+      "path": "wheels/frozenlist-1.8.0-cp313-cp313-win_amd64.whl",
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "size": 43882,
+      "sha256": "878be833caa6a3821caf85eb39c5ba92d28e85df26d57afb06b35b2efd937231",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/d8/cf/174c91dbc9cc49bc7b7aab74d8b734e974d1faa8f191c74af9b7e80848e6/frozenlist-1.8.0-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/fsspec-2026.9.0-py3-none-any.whl",
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "size": 221738,
+      "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/6c/c0/a98505f18594f1bce828bb159cec0fcf9860562f1a2c85913409fc8f3d9e/fsspec-2026.9.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/grpcio-1.83.1-cp313-cp313-win_amd64.whl",
+      "name": "grpcio",
+      "version": "1.83.1",
+      "size": 5160273,
+      "sha256": "2e57af456385491a76e13c4aada8c8f43a8e47051e06ea97a9dbe2a49654e6db",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/85/a0/df4de3b51d37ac8fb0320bb9668381ce2bd3b7aa990880bfc56a8a26f665/grpcio-1.83.1-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/grpcio-1.84.0-cp313-cp313-win_amd64.whl",
+      "name": "grpcio",
+      "version": "1.84.0",
+      "size": 5255326,
+      "sha256": "b61692f0069b3eee2fc8a3a1b7f6c044df9e03fede6ce69b3ca832e1c39f26c5",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/d0/9a/1fa59ddbfc8898e5518d1447e46f771f387f0ed6132ad531395338e51a5c/grpcio-1.84.0-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/grpcio_tools-1.83.1-cp313-cp313-win_amd64.whl",
+      "name": "grpcio-tools",
+      "version": "1.83.1",
+      "size": 1191938,
+      "sha256": "5e9eb45376a8e1d22e2ef067518616738272de223cbb13b2424d7880d04e4dbe",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/ad/37/b62a44c72df3cc61917f9d7cc42af0d32f60e7ca8b892dfcd95330eae68b/grpcio_tools-1.83.1-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/grpcio_tools-1.84.0-cp313-cp313-win_amd64.whl",
+      "name": "grpcio-tools",
+      "version": "1.84.0",
+      "size": 1191934,
+      "sha256": "2d1e701bd77282618e76898b7dfe05094201c679ccb0b321fff2985d0fdb2e3f",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/71/01/89a1d1f00801f892142ed31f28a2f325ce682b02bc294abf2ea8e951d205/grpcio_tools-1.84.0-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/h11-0.16.0-py3-none-any.whl",
+      "name": "h11",
+      "version": "0.16.0",
+      "size": 37515,
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/hf_xet-1.7.0-cp38-abi3-win_amd64.whl",
+      "name": "hf-xet",
+      "version": "1.7.0",
+      "size": 3822644,
+      "sha256": "2b7bb5727889b0f2436dbaaad8fc4c3e66b8240d992716989e0c086b4278b1bc",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/4d/59/b35106dfa71b6eef605dc88bd038fe99c7f86fb132a15b60d0bf2f235b2c/hf_xet-1.7.0-cp38-abi3-win_amd64.whl"
+    },
+    {
+      "path": "wheels/httpcore-1.0.9-py3-none-any.whl",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "size": 78784,
+      "sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/httpcore2-2.13.1-py3-none-any.whl",
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "size": 83423,
+      "sha256": "e1e05d4f25f7d7d496bfb96748f6f4b67657b03da069b3a68c36069f3db73d0a",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/httpx-0.28.1-py3-none-any.whl",
+      "name": "httpx",
+      "version": "0.28.1",
+      "size": 73517,
+      "sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/httpx2-2.13.1-py3-none-any.whl",
+      "name": "httpx2",
+      "version": "2.13.1",
+      "size": 95597,
+      "sha256": "6dff50fabc270ee5fd25d845d0b078ed20564579744d6d962850975996d2f9a4",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/huggingface_hub-1.33.0-py3-none-any.whl",
+      "name": "huggingface_hub",
+      "version": "1.33.0",
+      "size": 846435,
+      "sha256": "04e434b06e100eddbce9a6e817d72693a7884b10a79bd67ab48080d5c07eb899",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/fc/16/963096d224b80909432dc16561a615fd33d2d13beef3ce4c63fa25e40867/huggingface_hub-1.33.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/huggingface_hub-2.1.1-py3-none-any.whl",
+      "name": "huggingface_hub",
+      "version": "2.1.1",
+      "size": 838033,
+      "sha256": "d76fa1d8e6a59e01f012b1d88da604c099c7a0f2e26b1cc7d708f0a4283bd2a2",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/33/23/885b3a3b510c305f1d84421913935e19b6a48b93d173a0541674c1e88c2a/huggingface_hub-2.1.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/idna-3.19-py3-none-any.whl",
+      "name": "idna",
+      "version": "3.19",
+      "size": 68550,
+      "sha256": "815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/57/b0/0e52c878c53f245edd3a11020f20979b3f490f245af532c7cae3027754b5/idna-3.19-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/idna-3.20-py3-none-any.whl",
+      "name": "idna",
+      "version": "3.20",
+      "size": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/multidict-6.9.1-cp313-cp313-win_amd64.whl",
+      "name": "multidict",
+      "version": "6.9.1",
+      "size": 59449,
+      "sha256": "ac51cd64bae51c462ea58ad2492c9b8209667a4ef60c45c4a304518b67598d5d",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/be/78/1bac2987edac273a6b27fa50e9204bc3466c94a7b4f6a44828d730f8810f/multidict-6.9.1-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/numpy-2.4.6-cp313-cp313-win_amd64.whl",
+      "name": "numpy",
+      "version": "2.4.6",
+      "size": 12318598,
+      "sha256": "c4fc99836233ea196540b17ab0983aff60ed07941751930f5f4d05bc3b3b7359",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/b5/cd/9cc4dc876fb065d5c220aae4d5e14826b2715331bb7618ce1fb07a679d99/numpy-2.4.6-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/numpy-2.5.3-cp313-cp313-win_amd64.whl",
+      "name": "numpy",
+      "version": "2.5.3",
+      "size": 12560965,
+      "sha256": "71cad2b2a7451ab79d8f5e71b453485b6775963d5cf794179144a7463fe6e8ec",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/f3/ec/100f2b1794ede74a9b3d7ec6b9736927f56713414c1dfe19ab6c383494bf/numpy-2.5.3-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/onnxruntime-1.30.0-cp313-cp313-win_amd64.whl",
+      "name": "onnxruntime",
+      "version": "1.30.0",
+      "size": 14311378,
+      "sha256": "4b63041bd623a9a9ac5e353948436c6fa7f43edd12d6b4a4ebc340bca959ba93",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/3c/dd/c57c529dbc6dd55eca24b12cfbeab1b6a690de72083824eca689085f55b0/onnxruntime-1.30.0-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/packaging-26.3-py3-none-any.whl",
+      "name": "packaging",
+      "version": "26.3",
+      "size": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/pillow-12.3.0-cp313-cp313-win_amd64.whl",
+      "name": "pillow",
+      "version": "12.3.0",
+      "size": 7239691,
+      "sha256": "1cca606cd25738df4ed873d5ad46bbdb3d83b5cbca291f6b4ff13a4df6b0bbe8",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/a6/9b/7a58e61d62be561da3a356fe2384d4059a6345fc130e23ef1c36a5b81d24/pillow-12.3.0-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/platformdirs-4.12.3-py3-none-any.whl",
+      "name": "platformdirs",
+      "version": "4.12.3",
+      "size": 32493,
+      "sha256": "080f3b39423b5abfca9a23d84c4e9795f54d395cd8459867a8ded44084fcd5f8",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/c5/9b/6ce1ead737fe496611bda600c263b9a11ae7bd8f41bb13f9bd7e0a2c37a4/platformdirs-4.12.3-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/propcache-0.5.4-cp313-cp313-win_amd64.whl",
+      "name": "propcache",
+      "version": "0.5.4",
+      "size": 45342,
+      "sha256": "0c889f6fa84957bc7e8b4eab71fd16a0455068d5045e3aa40c733071d2b2fd77",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/01/bc/e0a7b84af04ec02d73a48aa71f091e1e4a2107e3074b7ce12195b66901f4/propcache-0.5.4-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/protobuf-7.36.1-cp310-abi3-win_amd64.whl",
+      "name": "protobuf",
+      "version": "7.36.1",
+      "size": 456518,
+      "sha256": "51139351435d9b43d88a55eaa49fb6f737fbb478fb0cbf2cf694d1a04a9d3363",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/db/37/155788a0d8daded960375af604202805308169f9b859419ea0aa370946e2/protobuf-7.36.1-cp310-abi3-win_amd64.whl"
+    },
+    {
+      "path": "wheels/protobuf-7.36.2-cp310-abi3-win_amd64.whl",
+      "name": "protobuf",
+      "version": "7.36.2",
+      "size": 456514,
+      "sha256": "a300819d441e078a5608c0d3c709796bb548136058fda017ae51d425b44fd353",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/8a/55/b77bda4e5e5f5971fb51b07663694690e9afdb9402136c16a522bd621cad/protobuf-7.36.2-cp310-abi3-win_amd64.whl"
+    },
+    {
+      "path": "wheels/proxy_tools-0.1.0-py3-none-any.whl",
+      "name": "proxy_tools",
+      "version": "0.1.0",
+      "size": 2944,
+      "sha256": "90f45cc62b22398356fb2f53a3232db6e4da0054ff09468bd7c32f37321bebe3",
+      "built_from_verified_pypi_source": true,
+      "source_url": "https://files.pythonhosted.org/packages/f2/cf/77d3e19b7fabd03895caca7857ef51e4c409e0ca6b37ee6e9f7daa50b642/proxy_tools-0.1.0.tar.gz",
+      "source_sha256": "ccb3751f529c047e2d8a58440d86b205303cf0fe8146f784d1cbcd94f0a28010"
+    },
+    {
+      "path": "wheels/pycparser-3.0-py3-none-any.whl",
+      "name": "pycparser",
+      "version": "3.0",
+      "size": 48172,
+      "sha256": "b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/PySocks-1.7.1-py3-none-any.whl",
+      "name": "PySocks",
+      "version": "1.7.1",
+      "size": 16725,
+      "sha256": "2725bd0a9925919b9b51739eea5f9e2bae91e83288108a9ad338b2e3a4435ee5",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/8d/59/b4572118e098ac8e46e399a1dd0f2d85403ce8bbaad9ec79373ed6badaf9/PySocks-1.7.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/pythonnet-3.1.0-cp310.cp311.cp312.cp313.cp314-none-win32.win_amd64.whl",
+      "name": "pythonnet",
+      "version": "3.1.0",
+      "size": 1644898,
+      "sha256": "7bdd4de03df3547a48122a3989265c8b31d5be0d19dadffa009eec7df8085e0b",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/db/67/031124fdcb937c266a3265118525bbf6dc13b8c79786d6a7290aecb6e7bb/pythonnet-3.1.0-cp310.cp311.cp312.cp313.cp314-none-win32.win_amd64.whl"
+    },
+    {
+      "path": "wheels/pywebview-6.2.1-py3-none-any.whl",
+      "name": "pywebview",
+      "version": "6.2.1",
+      "size": 525463,
+      "sha256": "9d07275f53894ab4d5e2e0e996227193e7187dec276d9b624dccbce029216b46",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/3d/25/9491695c22c4842c5b3903b4dc172e0eecf67a27c0af34a71512c9b76a0a/pywebview-6.2.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/pywhispercpp-1.5.1-cp313-cp313-win_amd64.whl",
+      "name": "pywhispercpp",
+      "version": "1.5.1",
+      "size": 1376108,
+      "sha256": "d1d31e95972416a089769db2c8db9661c639a1c8be4ecdd97f0712d9e8e77b08",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/53/f8/8649f3d284c673f431fd8455ba86df039163f6c0e1d71b3de9e2ca57c861/pywhispercpp-1.5.1-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/pyyaml-6.0.3-cp313-cp313-win_amd64.whl",
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "size": 154090,
+      "sha256": "79005a0d97d5ddabfeeea4cf676af11e647e41d81c9a7722a193022accdb6b7c",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/97/c9/39d5b874e8b28845e4ec2202b5da735d0199dbe5b8fb85f91398814a9a46/pyyaml-6.0.3-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/requests-2.34.2-py3-none-any.whl",
+      "name": "requests",
+      "version": "2.34.2",
+      "size": 73075,
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/setuptools-84.0.0-py3-none-any.whl",
+      "name": "setuptools",
+      "version": "84.0.0",
+      "size": 818216,
+      "sha256": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/95/9c/c510029fc6ef33a6275cd2c5d3cecd6613dfd6aa401d57c54f1c18852ccf/setuptools-84.0.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/soundcard-0.4.6-py3-none-any.whl",
+      "name": "SoundCard",
+      "version": "0.4.6",
+      "size": 43939,
+      "sha256": "ab44b8c1033ac6ec49c5d618ce096dab9b60c7d7a427c92bef15856e5ebb3e09",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/4c/be/eb381e700a61b4ce899e14850d7ae78f9600fd2f8b58b4c52b8714e81917/soundcard-0.4.6-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/sounddevice-0.5.6-py3-none-win_amd64.whl",
+      "name": "sounddevice",
+      "version": "0.5.6",
+      "size": 1009630,
+      "sha256": "7f4162f514f007b0bf25a3ccfed3f1705bc2ec311888a90232729eec4f57a4f4",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/8d/3e/cbc593c31a5f0d817b3fe97e64aa8461bd0f55cb07b67ce1b776296ae336/sounddevice-0.5.6-py3-none-win_amd64.whl"
+    },
+    {
+      "path": "wheels/soundfile-0.14.0-py2.py3-none-win_amd64.whl",
+      "name": "soundfile",
+      "version": "0.14.0",
+      "size": 1021480,
+      "sha256": "299491d3499460fb1b74bb4bd78b57ffc2d243a5fafa7b6ec1b264875c78453e",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/ed/97/b39c18ac1df45e755ca22b8b00e872929da5d107998a207a5e4ac831bfda/soundfile-0.14.0-py2.py3-none-win_amd64.whl"
+    },
+    {
+      "path": "wheels/srt-3.5.3-py3-none-any.whl",
+      "name": "srt",
+      "version": "3.5.3",
+      "size": 22644,
+      "sha256": "8ec5ad05a42233278b7ba221d575dcaff07ca06074a1ec70af4bdc93e4a9ec28",
+      "built_from_verified_pypi_source": true,
+      "source_url": "https://files.pythonhosted.org/packages/66/b7/4a1bc231e0681ebf339337b0cd05b91dc6a0d701fa852bb812e244b7a030/srt-3.5.3.tar.gz",
+      "source_sha256": "4884315043a4f0740fd1f878ed6caa376ac06d70e135f306a6dc44632eed0cc0"
+    },
+    {
+      "path": "wheels/supertonic-1.3.1-py3-none-any.whl",
+      "name": "supertonic",
+      "version": "1.3.1",
+      "size": 51871,
+      "sha256": "0079c9d4166008b8a6eeae95f20c092148786b7232192dd3dd9f358960c6c077",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/8f/9f/d3c0367115b378d09a3866502609841c283fbd48c5b8f58902a03f81b752/supertonic-1.3.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/tokenizers-0.23.2-cp310-abi3-win_amd64.whl",
+      "name": "tokenizers",
+      "version": "0.23.2",
+      "size": 2863236,
+      "sha256": "2e96f5699d5249c9c64aa8412e044f727aae3a4098cf830f9901ec1afc361cde",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/db/f7/0a69ac6b82dbccf3f71add938a161c497952749294b8dd6dfe03a819dc40/tokenizers-0.23.2-cp310-abi3-win_amd64.whl"
+    },
+    {
+      "path": "wheels/tqdm-4.70.1-py3-none-any.whl",
+      "name": "tqdm",
+      "version": "4.70.1",
+      "size": 80199,
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/truststore-0.10.4-py3-none-any.whl",
+      "name": "truststore",
+      "version": "0.10.4",
+      "size": 18660,
+      "sha256": "adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/19/97/56608b2249fe206a67cd573bc93cd9896e1efb9e98bce9c163bcdc704b88/truststore-0.10.4-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/typing_extensions-4.16.0-py3-none-any.whl",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "size": 45571,
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/urllib3-2.7.0-py3-none-any.whl",
+      "name": "urllib3",
+      "version": "2.7.0",
+      "size": 131087,
+      "sha256": "9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/urllib3-2.8.0-py3-none-any.whl",
+      "name": "urllib3",
+      "version": "2.8.0",
+      "size": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl"
+    },
+    {
+      "path": "wheels/vosk-0.3.45-py3-none-win_amd64.whl",
+      "name": "vosk",
+      "version": "0.3.45",
+      "size": 13997596,
+      "sha256": "6994ddc68556c7e5730c3b6f6bad13320e3519b13ce3ed2aa25a86724e7c10ac",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/c0/4c/deb0861f7da9696f8a255f1731bb73e9412cca29c4b3888a3fcb2a930a59/vosk-0.3.45-py3-none-win_amd64.whl"
+    },
+    {
+      "path": "wheels/websockets-17.1-cp313-cp313-win_amd64.whl",
+      "name": "websockets",
+      "version": "17.1",
+      "size": 217784,
+      "sha256": "0340bbef6bfbe16da888b3983d666a4db4954ac3253c38f13bc7aba0c7db5a2f",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/22/36/fb521f0f2994c25509651f169efe5582dddd8713d57a0757ba87859372ef/websockets-17.1-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/websockets-17.2-cp313-cp313-win_amd64.whl",
+      "name": "websockets",
+      "version": "17.2",
+      "size": 218531,
+      "sha256": "27c7a59b5352a8f741b422820adfe89dfe47c8f2d84fb32111e76111edaa0e83",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/13/eb/960411c0c574535d629c16e96a2b4e5353dbe4109df8ecea859e1b5245ee/websockets-17.2-cp313-cp313-win_amd64.whl"
+    },
+    {
+      "path": "wheels/yandex_music-2.2.0-py3-none-any.whl",
+      "name": "yandex-music",
+      "version": "2.2.0",
+      "size": 301907,
+      "sha256": "9c5b729f55666906ea0553534c57303d8e66d5512c280070fd71ff5b0a17634d",
+      "built_from_verified_pypi_source": true,
+      "source_url": "https://files.pythonhosted.org/packages/42/85/9f1d9e1327b558d74ee43e3d3f84b7b7e536c79a372cf83fcbf392ab2d3c/yandex-music-2.2.0.tar.gz",
+      "source_sha256": "46beaacf8206de212323264c89e0bd4f4e2e626483dfa58f95e78cacd1a102cf"
+    },
+    {
+      "path": "wheels/yarl-1.25.1-cp313-cp313-win_amd64.whl",
+      "name": "yarl",
+      "version": "1.25.1",
+      "size": 101945,
+      "sha256": "1f51020b2eb8a003c84925638ec63c21a750a4bddd3a22ec8eac6a742dadf1b9",
+      "upstream_pypi_sha256_verified": true,
+      "source_url": "https://files.pythonhosted.org/packages/3a/8f/4db01cef62caff0d7a4593ed694fb8a41a27a11158cab80d290221f13e57/yarl-1.25.1-cp313-cp313-win_amd64.whl"
+    }
+  ],
+  "profiles": [
+    {
+      "profile": "knowledge-graph-0.2.0",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "sleep-pause-timer-0.4.0",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "text-utils-0.1.3",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "voice-text-input-1.1.0",
+      "status": "ready",
+      "wheels": 20,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "yandex-smart-home-0.1.4",
+      "status": "ready",
+      "wheels": 11,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "component-mirror-0.1.0",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "voice-text-input-faster-whisper-optional",
+      "status": "ready",
+      "wheels": 24,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "music-controller-1.1.7",
+      "status": "ready",
+      "wheels": 35,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "sleep-pause-timer-1.1.2",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "auto-assistant-1.0.0",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "sea-battle-0.3.4",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "detective-game-0.3.4",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "yandex-smart-home-0.5.1",
+      "status": "ready",
+      "wheels": 12,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "browser-control-0.1.30",
+      "status": "ready",
+      "wheels": 6,
+      "python": "3.13",
+      "platform": "win_amd64"
+    },
+    {
+      "profile": "discord-local-1.1.3",
+      "status": "ready",
+      "wheels": 33,
+      "python": "3.13",
+      "platform": "win_amd64"
+    }
+  ],
+  "models": [
+    {
+      "id": "faster-whisper-tiny",
+      "path": "models/faster-whisper-tiny.zip",
+      "size": 78204953,
+      "sha256": "5490bdeac9d761b6634e7f741a9b3811c79642752c72806ef77d74440f194857",
+      "source_repository": "https://huggingface.co/Systran/faster-whisper-tiny",
+      "source_revision": "d90ca5fe260221311c53c58e660288d3deb8d356",
+      "target_relative": "voice-text-input/models",
+      "upstream_hashes_verified": true,
+      "files": [
+        {
+          "path": "models--Systran--faster-whisper-tiny/snapshots/d90ca5fe260221311c53c58e660288d3deb8d356/config.json",
+          "size": 2249,
+          "sha256": "a73a28cdfe1c43ccc7202fa333d1f89c202477271407ae9a7f19afa52039cac8"
+        },
+        {
+          "path": "models--Systran--faster-whisper-tiny/snapshots/d90ca5fe260221311c53c58e660288d3deb8d356/model.bin",
+          "size": 75538270,
+          "sha256": "dcb76c6586fc06cbdac6dd21f14cfd129cc4cdd9dce19bf4ffa62e59cbe6e6d1"
+        },
+        {
+          "path": "models--Systran--faster-whisper-tiny/snapshots/d90ca5fe260221311c53c58e660288d3deb8d356/tokenizer.json",
+          "size": 2203239,
+          "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+        },
+        {
+          "path": "models--Systran--faster-whisper-tiny/snapshots/d90ca5fe260221311c53c58e660288d3deb8d356/vocabulary.txt",
+          "size": 459861,
+          "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+        }
+      ]
+    },
+    {
+      "id": "faster-whisper-base",
+      "path": "models/faster-whisper-base.zip",
+      "size": 147884275,
+      "sha256": "d23cc988173ce856c0b7736d878d3f5f1538b0f0f21eb63820e900a7771fbc00",
+      "source_repository": "https://huggingface.co/Systran/faster-whisper-base",
+      "source_revision": "ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66",
+      "target_relative": "voice-text-input/models",
+      "upstream_hashes_verified": true,
+      "files": [
+        {
+          "path": "models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json",
+          "size": 2309,
+          "sha256": "56a6d8110d311f19c8f0471e562832c7527f146b567275bfca59fcf7c184da9a"
+        },
+        {
+          "path": "models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/model.bin",
+          "size": 145217532,
+          "sha256": "d01c3014881c9c6f3133c182f3d2887eb6ca1c789a7538c5c007196857a0a6a9"
+        },
+        {
+          "path": "models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json",
+          "size": 2203239,
+          "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+        },
+        {
+          "path": "models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt",
+          "size": 459861,
+          "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+        }
+      ]
+    },
+    {
+      "id": "faster-whisper-small",
+      "path": "models/faster-whisper-small.zip",
+      "size": 486213716,
+      "sha256": "3c2df2869d8b49e4338c376d9d624b4665c660d550dcd3a4e94997ba8aacd2a1",
+      "source_repository": "https://huggingface.co/Systran/faster-whisper-small",
+      "source_revision": "536b0662742c02347bc0e980a01041f333bce120",
+      "target_relative": "voice-text-input/models",
+      "upstream_hashes_verified": true,
+      "files": [
+        {
+          "path": "models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120/config.json",
+          "size": 2370,
+          "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+        },
+        {
+          "path": "models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120/model.bin",
+          "size": 483546902,
+          "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+        },
+        {
+          "path": "models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120/tokenizer.json",
+          "size": 2203239,
+          "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+        },
+        {
+          "path": "models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120/vocabulary.txt",
+          "size": 459861,
+          "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+        }
+      ]
+    },
+    {
+      "id": "vosk-model-small-ru-0.22",
+      "path": "models/vosk-model-small-ru-0.22.zip",
+      "size": 46798080,
+      "sha256": "d12032ece55abb1715a56f7f5298cb6f5232bf4d885fefb67b5e22cdf53f4a71",
+      "source_repository": "https://alphacephei.com/vosk/models",
+      "source": "complete-installed-model",
+      "target_relative": "voice-text-input/models",
+      "files": [
+        {
+          "path": "vosk-model-small-ru-0.22/am/final.mdl",
+          "size": 15862383,
+          "sha256": "36d67b53dc90d96ea48097f9e17e7c5937689ad76cb8bed25091317bbaf25919"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/conf/mfcc.conf",
+          "size": 131,
+          "sha256": "1e2228006d01d805ad1c267fee9f79709ca87ac51bd82b0e3f5c69ba543f0fc4"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/conf/model.conf",
+          "size": 289,
+          "sha256": "dd7178da0e99fdbe489816c1e9702c3daa28e02accacc2993e0becb7af33b80c"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/graph/disambig_tid.int",
+          "size": 25,
+          "sha256": "c3af3dbc5eb301c4b282480d785c04b1642a8db83210a12332e9790e50146fd2"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/graph/Gr.fst",
+          "size": 32288259,
+          "sha256": "189b4f67c69eb34b9d8b47b12f184665e5445667ca5264579b61c6b9eb2cef1e"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/graph/HCLr.fst",
+          "size": 32993810,
+          "sha256": "0b096f4676f306aa3e60d2244ef1e24c5c699b8794acf3c3946b59bcc9dca831"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/graph/phones/word_boundary.int",
+          "size": 2166,
+          "sha256": "23081404fe1cc7338c013a4beec133637147d60472c06ab64ff88ee3d028a7b5"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/ivector/final.dubm",
+          "size": 168048,
+          "sha256": "7dffe22bd992d7274fba925632bded4756d82dfd9b962d3c703110251fdf35b8"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/ivector/final.ie",
+          "size": 9927287,
+          "sha256": "94f2558d00fe199ac01409281352eb16707ec075baaf9cc0d7b53011583cfa0e"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/ivector/final.mat",
+          "size": 44975,
+          "sha256": "956577d396b636fe359b4321f10df5ed6a76bdfdec366b4a2b7d3242e524f04f"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/ivector/global_cmvn.stats",
+          "size": 1077,
+          "sha256": "c600cbf4acfbfac99d587040d48dc31129cd635b112ff15bfa2e9d3b0cece1f8"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/ivector/online_cmvn.conf",
+          "size": 95,
+          "sha256": "a2f3571754b64297cb7efb2e7ca3df61995c5a45fcbb97188f90613552bb2dfe"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/ivector/splice.conf",
+          "size": 35,
+          "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+        },
+        {
+          "path": "vosk-model-small-ru-0.22/README",
+          "size": 660,
+          "sha256": "b662517cacda14945e159538d6dd8faff23bd706e024c4fb338b6013c9939b9e"
+        }
+      ]
+    }
+  ],
+  "providers": [
+    {
+      "id": "codex",
+      "version": "0.160.1",
+      "path": "providers/codex-cli-0.160.1-windows-x64.zip",
+      "size": 164230043,
+      "sha256": "6ee8ed53532ade714bf0ac8f03a44a2188b534b4c130d83d84dc8728b0f840e0",
+      "packages": [
+        {
+          "name": "@openai/codex",
+          "installed_as": "@openai/codex",
+          "version": "0.160.1",
+          "source_url": "https://registry.npmjs.org/@openai/codex/-/codex-0.160.1.tgz",
+          "upstream_integrity": "sha512-f1yrJhwgimKQI1kYQlxdPJcFwkNZxZrbz7Hf89EAcnLqkQ7TiESzr2FgSZn13Ga5RuHjlVUfurzwq10wk9zw2g==",
+          "upstream_integrity_verified": true,
+          "license": "Apache-2.0"
+        },
+        {
+          "name": "@openai/codex",
+          "installed_as": "@openai/codex-win32-x64",
+          "version": "0.160.1-win32-x64",
+          "source_url": "https://registry.npmjs.org/@openai/codex/-/codex-0.160.1-win32-x64.tgz",
+          "upstream_integrity": "sha512-yyqykHtHNhm0ZViofGozz9a4ffUyXDsiyRu9Q2hPNg/cu4uzSsovNr5kDmzBXPFWAilmlZuNkwpw1W7uae2nlg==",
+          "upstream_integrity_verified": true,
+          "license": "Apache-2.0"
+        }
+      ],
+      "version_command_passed": true,
+      "no_account_data_included": true
+    },
+    {
+      "id": "gemini",
+      "version": "0.63.0",
+      "path": "providers/gemini-cli-0.63.0-windows-x64.zip",
+      "size": 23515455,
+      "sha256": "d9d409c0c2032102ea73f4b25dde62ee222328d59355be11a5ee4255c6b93202",
+      "packages": [
+        {
+          "name": "@google/gemini-cli",
+          "installed_as": "@google/gemini-cli",
+          "version": "0.63.0",
+          "source_url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-0.63.0.tgz",
+          "upstream_integrity": "sha512-mmhqMmAdsoplCzrLQQC4yJBqr4uSKXghnrLspgUU6N9drmsaq7pi7oF09skRYzEq2dYK6eMT4UpFQP6rG2o/ew==",
+          "upstream_integrity_verified": true,
+          "license": "Apache-2.0"
+        },
+        {
+          "name": "@lydell/node-pty",
+          "installed_as": "@lydell/node-pty",
+          "version": "1.1.0",
+          "source_url": "https://registry.npmjs.org/@lydell/node-pty/-/node-pty-1.1.0.tgz",
+          "upstream_integrity": "sha512-VDD8LtlMTOrPKWMXUAcB9+LTktzuunqrMwkYR1DMRBkS6LQrCt+0/Ws1o2rMml/n3guePpS7cxhHF7Nm5K4iMw==",
+          "upstream_integrity_verified": true,
+          "license": "MIT"
+        },
+        {
+          "name": "@lydell/node-pty-win32-x64",
+          "installed_as": "@lydell/node-pty-win32-x64",
+          "version": "1.1.0",
+          "source_url": "https://registry.npmjs.org/@lydell/node-pty-win32-x64/-/node-pty-win32-x64-1.1.0.tgz",
+          "upstream_integrity": "sha512-3N56BZ+WDFnUMYRtsrr7Ky2mhWGl9xXcyqR6cexfuCqcz9RNWL+KoXRv/nZylY5dYaXkft4JaR1uVu+roiZDAw==",
+          "upstream_integrity_verified": true,
+          "license": "MIT"
+        }
+      ],
+      "version_command_passed": true,
+      "no_account_data_included": true
+    },
+    {
+      "id": "claude",
+      "version": "2.1.292",
+      "path": "providers/claude-code-win32-x64-2.1.292.tgz",
+      "size": 115349888,
+      "sha256": "4a10b5e0e8f81eb27bf368b6165189bb092a881ba3fb9b252d76466f0fa00e55",
+      "source_url": "https://registry.npmjs.org/@anthropic-ai/claude-code-win32-x64/-/claude-code-win32-x64-2.1.292.tgz",
+      "upstream_integrity": "sha512-CXrrjj7Czs9o2YossKkN3z/K+/1GmIjjt3H8muHBDzxw/WM/J9I4kz6jBI4wLwt5miVMkXwwhrwT0hhyNPYAIw==",
+      "upstream_integrity_verified": true,
+      "original_distribution_unmodified": true,
+      "license": "SEE LICENSE IN LICENSE.md",
+      "license_terms": "https://code.claude.com/docs/en/legal-and-compliance",
+      "version_command_passed": true,
+      "no_account_data_included": true
+    }
+  ],
+  "runtimes": [
+    {
+      "path": "runtimes/python-3.13.16-amd64.exe",
+      "size": 29935584,
+      "sha256": "fb4f9f5d438b2396da0086dc70b935c530cb578e37adc6d354f7ad2037fee83b"
+    },
+    {
+      "path": "runtimes/node-v24.21.0-win-x64.zip",
+      "size": 37618919,
+      "sha256": "158f7685b44de51f6c0df1d153526cbcd3e1bc739a8dfc607721cef75de9e541",
+      "source_url": "https://nodejs.org/dist/v24.21.0/node-v24.21.0-win-x64.zip"
+    },
+    {
+      "path": "runtimes/uv-x86_64-pc-windows-msvc.zip",
+      "size": 18043715,
+      "sha256": "75d05de6762778c31ee183398de7dd15093fad0ed90b1f236d8205ea5ec00c90"
+    }
+  ],
+  "libraries": {
+    "path": "python-libraries-win64-py313-author.zip",
+    "size": 142688711,
+    "sha256": "dab0d3e3f34a2773ced2c6513f19b5bdcc827cc2a756cadae422ea27d49e9b53"
+  },
+  "author_releases": [
+    {
+      "repository": "Voltur792/VC-Discord",
+      "id": "discord-voice-bridge",
+      "version": "1.1.3"
+    },
+    {
+      "repository": "Voltur792/astra-music",
+      "id": "music-controller",
+      "version": "1.1.7"
+    },
+    {
+      "repository": "Voltur792/voice-text-input",
+      "id": "voice-text-input",
+      "version": "1.1.0"
+    },
+    {
+      "repository": "Voltur792/SPT",
+      "id": "sleep-pause-timer",
+      "version": "1.1.2"
+    },
+    {
+      "repository": "Voltur792/auto-assistant",
+      "id": "auto-assistant",
+      "version": "1.0.0"
+    },
+    {
+      "repository": "Voltur792/astra-sea-battle",
+      "id": "sea-battle",
+      "version": "0.3.4"
+    },
+    {
+      "repository": "Voltur792/detective-game",
+      "id": "detective-game",
+      "version": "0.3.4"
+    },
+    {
+      "repository": "Voltur792/Y-home-f-astra",
+      "id": "yandex-smart-home",
+      "version": "0.5.1"
+    },
+    {
+      "repository": "Voltur792/browser-control",
+      "id": "browser-control",
+      "version": "0.1.30"
+    }
+  ],
+  "ffmpeg": {
+    "id": "ffmpeg",
+    "version": "9.0.2",
+    "path": "runtimes/ffmpeg-9.0.2-essentials_build.zip",
+    "size": 114768076,
+    "sha256": "60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba",
+    "source_url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.0.2-essentials_build.zip",
+    "executable": "ffmpeg-9.0.2-essentials_build/bin/ffmpeg.exe",
+    "folder": "ffmpeg-9.0.2-essentials_build",
+    "license": "GPL-3.0-or-later"
+  },
+  "easyvk": {
+    "id": "easyvk",
+    "version": "music-1.1.7",
+    "path": "providers/easyvk-music-1.1.7.zip",
+    "size": 10498558,
+    "sha256": "ac4d6c7e616228eb7ca4a6a5413c0f8ee7834a35206587b3fa74582b46a53629",
+    "lock_sha256": "11ac3d74c003183d4d1e1d16bef16856845a7e352d2538d09f44944d598d1c41",
+    "source_repository": "Voltur792/astra-music",
+    "release_tag": "v1.1.7",
+    "package_count": 144,
+    "lifecycle_scripts_executed": false
+  },
+  "discord_profile": "discord-local-1.1.3",
+  "webview2": {
+    "id": "webview2",
+    "version": "1.3.275.13",
+    "path": "runtimes/MicrosoftEdgeWebView2RuntimeInstallerX64.exe",
+    "size": 212358352,
+    "sha256": "ac22ecdc19c5b88b87f3fa752c00da9541653a8f5c0c5fc4a3b2b6ebe6591f69",
+    "source_url": "https://go.microsoft.com/fwlink/?linkid=2124701",
+    "authenticode": {
+      "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+      "status": "Valid",
+      "version": "1.3.275.13"
+    },
+    "license": "Microsoft WebView2 Runtime distribution terms"
+  }
+}

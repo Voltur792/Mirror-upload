@@ -1,0 +1,25 @@
+[plugin]
+id = "component-mirror"
+name = "Mirror-upload"
+version = "0.5.4"
+description = "Set up Windows runtimes, offline libraries and local Astra models from a verified Yandex Disk mirror."
+author = "Voltur"
+license = "MIT"
+
+[entry]
+command = "python"
+args = ["-m", "src.plugin"]
+runtimes = ["python"]
+
+[capabilities]
+ui_contributions = true
+
+[permissions]
+
+[platform]
+os = ["windows"]
+arch = ["x86_64"]
+
+[config]
+schema = '''{"type":"object","properties":{"astra_data_dir":{"type":"string","default":"","title":"Папка данных Astra (необязательно)","description":"Оставьте пустым для стандартной установки. При переносной установке укажите папку data, содержащую models."},"astra_executable":{"type":"string","default":"","title":"Путь к Astra.exe (необязательно)","description":"Для переносной установки. Оставьте пустым, чтобы найти стандартную установку автоматически."}}}'''
+

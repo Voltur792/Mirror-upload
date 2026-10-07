@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "components": [
+    {
+      "kind": "supertonic",
+      "model_id": "supertonic-3",
+      "name": "Локальные голоса Supertonic 3",
+      "archive": "packages/supertonic-supertonic-3.zip",
+      "archive_size": 401278644,
+      "archive_sha256": "ea29cec7d1a691097f4235057d5730eb20a96a79d2bd38ee188b08bf2521ceaf",
+      "files": [
+        {
+          "path": "onnx/duration_predictor.onnx",
+          "size": 3700147,
+          "sha256": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db"
+        },
+        {
+          "path": "onnx/text_encoder.onnx",
+          "size": 36416150,
+          "sha256": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff"
+        },
+        {
+          "path": "onnx/vector_estimator.onnx",
+          "size": 256534781,
+          "sha256": "883ac868ea0275ef0e991524dc64f16b3c0376efd7c320af6b53f5b780d7c61c"
+        },
+        {
+          "path": "onnx/vocoder.onnx",
+          "size": 101424195,
+          "sha256": "085de76dd8e8d5836d6ca66826601f615939218f90e519f70ee8a36ed2a4c4ba"
+        },
+        {
+          "path": "onnx/tts.json",
+          "size": 8253,
+          "sha256": "42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09"
+        },
+        {
+          "path": "onnx/unicode_indexer.json",
+          "size": 277676,
+          "sha256": "9bf7346e43883a81f8645c81224f786d43c5b57f3641f6e7671a7d6c493cb24f"
+        },
+        {
+          "path": "voice_styles/F1.json",
+          "size": 292046,
+          "sha256": "bbdec6ee00231c2c742ad05483df5334cab3b52fda3ba38e6a07059c4563dbc2"
+        },
+        {
+          "path": "voice_styles/F2.json",
+          "size": 292423,
+          "sha256": "7c722c6a72707b1a77f035d67f0d1351ba187738e06f7683e8c72b1df3477fc6"
+        },
+        {
+          "path": "voice_styles/F3.json",
+          "size": 290794,
+          "sha256": "12f6ef2573baa2defa1128069cb59f203e3ab67c92af77b42df8a0e3a2f7c6ab"
+        },
+        {
+          "path": "voice_styles/F4.json",
+          "size": 291808,
+          "sha256": "c2fa764c1225a76dfc3e2c73e8aa4f70d9ee48793860eb34c295fff01c2e032b"
+        },
+        {
+          "path": "voice_styles/F5.json",
+          "size": 291479,
+          "sha256": "45966e73316415626cf41a7d1c6f3b4c70dbc1ba2bee5c1978ef0ce33244fc8d"
+        },
+        {
+          "path": "voice_styles/M1.json",
+          "size": 291748,
+          "sha256": "e35604687f5d23694b8e91593a93eec0e4eca6c0b02bb8ed69139ab2ea6b0a5b"
+        },
+        {
+          "path": "voice_styles/M2.json",
+          "size": 292055,
+          "sha256": "b76cbf62bac707c710cf0ae5aba5e31eea1a6339a9734bfae33ab98499534a50"
+        },
+        {
+          "path": "voice_styles/M3.json",
+          "size": 290198,
+          "sha256": "ea1ac35ccb91b0d7ecad533a2fbd0eec10c91513d8951e3b25fbba99954e159b"
+        },
+        {
+          "path": "voice_styles/M4.json",
+          "size": 291522,
+          "sha256": "ca8eefad4fcd989c9379032ff3e50738adc547eeb5e221b82593a6d7b3bac303"
+        },
+        {
+          "path": "voice_styles/M5.json",
+          "size": 291469,
+          "sha256": "dd22b92740314321f8ae11c5e87f8dd60d060f15dd3a632b5adf77f471f77af2"
+        }
+      ]
+    },
+    {
+      "kind": "vox",
+      "model_id": "astra-neutral",
+      "name": "Голос Astra · Vox",
+      "archive": "packages/vox-astra-neutral.zip",
+      "archive_size": 395785008,
+      "archive_sha256": "40e7f2dd2e1d3d440ff5502369009783b1fe7438058c511bea38aac45e52283e",
+      "files": [
+        {
+          "path": "astra_neutral.avox",
+          "size": 395784640,
+          "sha256": "ff69568ef852d03c79fb39cd3b270c5bc57d66feed0a0bcd0b6d1da0505750b6"
+        },
+        {
+          "path": "astra_neutral.avox.manifest.json",
+          "size": 94,
+          "sha256": "4523024eecee6eec11cba46bc620fe5c40ab49f0c673c7cad773892ef9f23876"
+        }
+      ]
+    },
+    {
+      "kind": "whisper",
+      "model_id": "large-v3-turbo-q5_0",
+      "name": "Whisper large-v3-turbo-q5_0",
+      "archive": "packages/whisper-large-v3-turbo-q5_0.zip",
+      "archive_size": 574041349,
+      "archive_sha256": "6da718be5dbd040dbd7f068f35631f8646cedc365556b6d6199ae39732058c11",
+      "files": [
+        {
+          "path": "ggml-large-v3-turbo-q5_0.bin",
+          "size": 574041195,
+          "sha256": "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2"
+        }
+      ]
+    },
+    {
+      "kind": "whisper",
+      "model_id": "large-v3-turbo",
+      "name": "Whisper large-v3-turbo",
+      "archive": "packages/whisper-large-v3-turbo.zip",
+      "archive_size": 1624555419,
+      "archive_sha256": "586e7e84accc14727e2ce40558b54e300d61626bbcdd3adf44614bc27267a53f",
+      "files": [
+        {
+          "path": "ggml-large-v3-turbo.bin",
+          "size": 1624555275,
+          "sha256": "1fc70f774d38eb169993ac391eea357ef47c88757ef72ee5943879b7e8e2bc69"
+        }
+      ]
+    },
+    {
+      "kind": "embeddings",
+      "model_id": "m2v-qwen3-small",
+      "name": "Поиск · m2v-qwen3-small",
+      "archive": "packages/embeddings-m2v-qwen3-small.zip",
+      "archive_size": 87596015,
+      "archive_sha256": "b970274e3f471f62f26cd6959588bc5a9f8ed4a5141577cbc2f9088494c22c2b",
+      "files": [
+        {
+          "path": "config.json",
+          "size": 286,
+          "sha256": "81b4c2dcc17f7c26632b43168bf554c4409d0f8bbfa42e94f7021ca7a3ae0171"
+        },
+        {
+          "path": "model.safetensors",
+          "size": 77641816,
+          "sha256": "98a3e8e799ee296939952312795f13f519321d4d829fc91ef6996190636fdb49"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 9953579,
+          "sha256": "83d3fb5daf0a948826d180ed1273db18277d7a03637bee50b554dc8c25add635"
+        }
+      ]
+    }
+  ]
+}

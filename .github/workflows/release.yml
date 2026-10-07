@@ -1,0 +1,135 @@
+name: Windows build and release
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror-upload-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14.3'
+          architecture: x64
+      - name: Validate version
+        shell: pwsh
+        run: |
+          python -c "import os,tomllib; p=tomllib.load(open('plugin.toml','rb')); v=p['plugin']['version']; assert tomllib.load(open('pyproject.toml','rb'))['project']['version']==v; assert os.environ['GITHUB_REF_TYPE']!='tag' or os.environ['GITHUB_REF_NAME']=='v'+v"
+          if ($LASTEXITCODE -ne 0) { throw 'Version mismatch' }
+      - name: Install build dependencies
+        shell: pwsh
+        run: |
+          python -m pip install -r requirements.lock PyInstaller==6.22.3
+          if ($LASTEXITCODE -ne 0) { throw 'Build dependencies failed' }
+      - name: Unit tests
+        shell: pwsh
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          python -m unittest discover -s tests -q
+          if ($LASTEXITCODE -ne 0) { throw 'Unit tests failed' }
+      - name: Download and verify official Astra CLI
+        shell: pwsh
+        run: |
+          $base = 'https://github.com/mihailinl/AstraPlugins/releases/download/cli-v0.4.0'
+          $archive = 'astra-plugin-0.4.0-windows-x64.zip'
+          $tools = Join-Path $env:RUNNER_TEMP 'astra-cli'
+          New-Item -ItemType Directory -Path $tools | Out-Null
+          Invoke-WebRequest "$base/$archive" -OutFile (Join-Path $tools $archive)
+          Invoke-WebRequest "$base/SHA256SUMS.txt" -OutFile (Join-Path $tools 'SHA256SUMS.txt')
+          $line = Get-Content (Join-Path $tools 'SHA256SUMS.txt') | Where-Object { $_ -match "\s+\*?$([regex]::Escape($archive))$" }
+          if (@($line).Count -ne 1) { throw 'Missing official CLI checksum' }
+          $expected = ($line.Trim() -split '\s+')[0]
+          if ((Get-FileHash (Join-Path $tools $archive) -Algorithm SHA256).Hash -ne $expected) { throw 'CLI checksum mismatch' }
+          Expand-Archive -LiteralPath (Join-Path $tools $archive) -DestinationPath $tools
+          $cli = @(Get-ChildItem -LiteralPath $tools -Recurse -Filter astra-plugin.exe)
+          if ($cli.Count -ne 1) { throw 'Unexpected CLI file set' }
+          "ASTRA_CLI=$($cli[0].FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+      - name: Build Windows bundle
+        shell: pwsh
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          python scripts/build_native.py --cli "$env:ASTRA_CLI" --work-dir "$env:RUNNER_TEMP/native-build" --output-dir dist
+          if ($LASTEXITCODE -ne 0) { throw 'Native build failed' }
+      - name: Verify standalone executable and bundle
+        shell: pwsh
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          $package = Join-Path $env:RUNNER_TEMP 'native-build/package'
+          $bundle = @(Get-ChildItem -LiteralPath dist -Filter '*.astraplugin')
+          if ($bundle.Count -ne 1) { throw 'Unexpected bundle count' }
+          & $env:ASTRA_CLI verify $bundle[0].FullName
+          if ($LASTEXITCODE -ne 0) { throw 'Bundle integrity failed' }
+          $savedPath = $env:Path
+          try {
+            $env:Path = "$env:SystemRoot/System32;$env:SystemRoot"
+            & (Join-Path $package 'mirror-upload.exe') --self-check
+            if ($LASTEXITCODE -ne 0) { throw 'Standalone executable failed' }
+            & $env:ASTRA_CLI test $package
+            if ($LASTEXITCODE -ne 0) { throw 'SDK conformance failed' }
+          } finally { $env:Path = $savedPath }
+          Copy-Item -LiteralPath README.md -Destination dist/README.md
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: windows-release
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    if: github.ref_type == 'tag'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
+        with:
+          name: windows-release
+          path: dist
+      - name: Validate assets and derive checksum
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          expected="component-mirror-${TAG#v}-windows-x64.astraplugin"
+          test "$(find dist -mindepth 1 -maxdepth 1 -type f | wc -l)" -eq 2
+          test -f "dist/$expected"
+          test -f dist/README.md
+          (cd dist && sha256sum "$expected" > SHA256SUMS.txt)
+      - name: Attest Windows bundle
+        id: attest
+        uses: actions/attest-build-provenance@96b4a1ef7235a096b17240c259729fdd70c83d45 # v2
+        with:
+          subject-path: dist/*.astraplugin
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+          ATTESTATION_BUNDLE: ${{ steps.attest.outputs.bundle-path }}
+        run: |
+          set -euo pipefail
+          cp "$ATTESTATION_BUNDLE" "dist/component-mirror-${TAG#v}.sigstore.jsonl"
+          gh release create "$TAG" --verify-tag --draft --title "Mirror-upload ${TAG#v}" --notes-file dist/README.md
+          gh release upload "$TAG" dist/*.astraplugin dist/SHA256SUMS.txt dist/*.sigstore.jsonl
+          gh release edit "$TAG" --draft=false
