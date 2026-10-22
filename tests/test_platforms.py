@@ -14,17 +14,17 @@ class PlatformTests(unittest.TestCase):
     def test_linux_uses_xdg_data_and_configuration(self):
         with TemporaryDirectory() as tmp, patch.object(platform_paths.sys, 'platform', 'linux'), patch.object(Path, 'home', return_value=Path(tmp)):
             with patch.dict(os.environ, {'XDG_DATA_HOME': str(Path(tmp) / 'data'), 'XDG_CONFIG_HOME': str(Path(tmp) / 'cfg')}, clear=True):
-                self.assertEqual(default_data_root(), Path(tmp) / 'data' / 'astra')
+                self.assertEqual(default_data_root(), (Path(tmp) / 'data' / 'astra').resolve())
                 self.assertEqual(state_root(), Path(tmp) / 'cfg' / 'astra' / 'component-mirror')
             with patch.dict(os.environ, {'XDG_DATA_HOME': 'relative'}, clear=True):
-                self.assertEqual(default_data_root(), Path(tmp) / '.local' / 'share' / 'astra')
+                self.assertEqual(default_data_root(), (Path(tmp) / '.local' / 'share' / 'astra').resolve())
 
     def test_macos_application_support_and_explicit_portable_root(self):
         with TemporaryDirectory() as tmp, patch.object(platform_paths.sys, 'platform', 'darwin'), patch.object(Path, 'home', return_value=Path(tmp)):
             with patch.dict(os.environ, {}, clear=True):
-                self.assertEqual(default_data_root(), Path(tmp) / 'Library' / 'Application Support' / 'com.astra.astra')
+                self.assertEqual(default_data_root(), (Path(tmp) / 'Library' / 'Application Support' / 'com.astra.astra').resolve())
             with patch.dict(os.environ, {'COMPONENT_MIRROR_ASTRA_DATA': str(Path(tmp) / 'portable')}, clear=True):
-                self.assertEqual(default_data_root(), Path(tmp) / 'portable')
+                self.assertEqual(default_data_root(), (Path(tmp) / 'portable').resolve())
 
     def test_portable_dashboard_and_methods_never_touch_windows_environment(self):
         with TemporaryDirectory() as tmp, patch.dict(os.environ, {'COMPONENT_MIRROR_STATE': str(Path(tmp) / 'state'), 'COMPONENT_MIRROR_ASTRA_DATA': str(Path(tmp) / 'models')}):
