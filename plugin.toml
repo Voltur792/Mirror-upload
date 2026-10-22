@@ -1,7 +1,7 @@
 [plugin]
 id = "component-mirror"
 name = "Mirror-upload"
-version = "0.6.0"
+version = "0.6.1"
 description = "Set up Windows runtimes, offline libraries and local Astra models from a verified Yandex Disk mirror."
 author = "Voltur"
 license = "MIT"
