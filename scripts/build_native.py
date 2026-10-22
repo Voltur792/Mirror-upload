@@ -4,6 +4,7 @@ import shutil
 import subprocess
 import sys
 import tomllib
+import re
 from pathlib import Path
 
 project = Path(__file__).resolve().parent.parent
@@ -38,6 +39,8 @@ manifest = (project / 'plugin.toml').read_text('utf-8')
 manifest = manifest.replace('command = "python"', 'command = "./mirror-upload.exe"')
 manifest = manifest.replace('args = ["-m", "src.plugin"]', 'args = []')
 manifest = manifest.replace('runtimes = ["python"]', 'runtimes = []')
+manifest = re.sub(r'(?m)^os = \[.*\]$', 'os = ["windows"]', manifest)
+manifest = re.sub(r'(?m)^arch = \[.*\]$', 'arch = ["x86_64"]', manifest)
 manifest += '\n[bundle]\nexecutables = ["mirror-upload.exe"]\n'
 (package / 'plugin.toml').write_text(manifest, encoding='utf-8')
 shutil.copy2(work / 'dist/mirror-upload.exe', package / 'mirror-upload.exe')

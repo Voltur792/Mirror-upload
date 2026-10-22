@@ -15,3 +15,5 @@ build/
 dist/
 *.spec
 .native-build/
+
+.tmp-platform-tests/

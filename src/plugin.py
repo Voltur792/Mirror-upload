@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import os
 import shutil
+import sys
 import tempfile
 import threading
 import zipfile
@@ -16,6 +17,7 @@ from .installer import install_archive
 from .yandex_disk import PublicFolder
 from .quick_setup import DEFAULT_MIRROR, QuickSetup, load_seed, supported_platform
 from .user_environment import is_applied, restore
+from .platform_paths import astra_config_dir
 
 BASE = Path(__file__).resolve().parent.parent
 BUSY_STATES = {"preparing", "downloading", "verifying", "installing"}
@@ -26,10 +28,13 @@ def state_root() -> Path:
     override = os.environ.get("COMPONENT_MIRROR_STATE")
     if override:
         return Path(override).resolve()
-    appdata = os.environ.get("APPDATA")
-    if appdata:
-        return Path(appdata) / "astra" / "astra" / "config" / "component-mirror"
-    return BASE / "data"
+    target = astra_config_dir() / "component-mirror"
+    if sys.platform == 'win32':
+        return target
+    legacy = BASE / "data"
+    if not (target / "catalog-cache.json").exists() and (legacy / "catalog-cache.json").exists():
+        return legacy
+    return target
 
 
 def atomic_json(path: Path, value):
@@ -85,6 +90,10 @@ class ComponentMirror(Plugin):
             pass
 
     def _setup_dashboard(self):
+        if not supported_platform():
+            return {"supported": False, "ready": False, "environment_saved": False,
+                    "restart_required": False, "total_download_bytes": 0, "registry_plugins": 0,
+                    "message": "Быстрая настройка доступна только в Windows x64. Здесь доступны загрузка и установка пакетов моделей во вкладке «Компоненты»."}
         seed = load_seed()
         setup_root = self._storage / "setup"
         ready = bool(self._quick_result.get("ready")) and (setup_root / "start-astra.cmd").is_file()
@@ -156,7 +165,7 @@ class ComponentMirror(Plugin):
                         "job": dict(self._job), "info": [
                             "Поддерживаются локальные модели Supertonic 3, Vox, Whisper и embeddings. Каталог определяется загруженными пакетами.",
                             "«Файлы на месте» означает наличие файлов. Выбор модели, запуск движка и активация выполняются в Astra.",
-                            "Быстрая настройка добавляет среды исполнения, библиотеки и модели текущего каталога. Самих плагинов она не устанавливает.",
+                            "Быстрая настройка Windows добавляет среды исполнения, библиотеки и модели. На Linux и macOS доступны пакеты моделей; среды исполнения устанавливаются отдельно.",
                         ]}
         except (OSError, ValueError) as exc:
             return {"mirror_configured": bool(self._source_url), "mirror_state": "error", "mirror_message": str(exc),
@@ -323,6 +332,8 @@ class ComponentMirror(Plugin):
     @ui_call
     async def restore_user_environment(self):
         with self._lock:
+            if not supported_platform():
+                return {"ok": False, "message": "Восстановление переменных Windows недоступно на этой ОС."}
             if self._busy():
                 return {"ok": False, "message": "Дождитесь завершения текущей операции."}
             try:

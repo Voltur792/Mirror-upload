@@ -7,6 +7,7 @@ import os
 import re
 from pathlib import Path, PurePosixPath
 from typing import Any
+from .platform_paths import astra_data_dir
 
 MAX_COMPONENT_BYTES = 10 * 1024**3
 MAX_CATALOG_BYTES = 2 * 1024**2
@@ -28,12 +29,7 @@ def default_data_root() -> Path:
     override = os.environ.get("COMPONENT_MIRROR_ASTRA_DATA")
     if override:
         return Path(override).resolve()
-    if os.name != "nt":
-        raise ValueError("Эта версия плагина поддерживает Windows. Укажите папку данных в настройках.")
-    appdata = os.environ.get("APPDATA")
-    if not appdata:
-        raise ValueError("Не удалось определить APPDATA. Укажите папку данных Astra в настройках.")
-    return (Path(appdata) / "astra" / "astra" / "data").resolve()
+    return astra_data_dir().resolve()
 
 
 def safe_relative(value: Any) -> str:

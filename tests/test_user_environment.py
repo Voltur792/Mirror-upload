@@ -79,7 +79,7 @@ class EnvironmentTests(unittest.TestCase):
         self.assertEqual(backup, self.backup.read_bytes())
 
     def test_default_data_root_uses_current_unicode_user(self):
-        with patch.dict(os.environ, {'APPDATA': str(self.root)}, clear=True):
+        with patch('src.platform_paths.sys.platform', 'win32'), patch.dict(os.environ, {'APPDATA': str(self.root)}, clear=True):
             self.assertEqual(default_data_root(), (self.root / 'astra' / 'astra' / 'data').resolve())
 
     def test_launcher_targets_redirected_desktop_and_quotes_unicode_paths(self):

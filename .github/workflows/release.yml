@@ -1,4 +1,4 @@
-name: Windows build and release
+name: Build and release
 
 on:
   push:
@@ -45,8 +45,8 @@ jobs:
       - name: Download and verify official Astra CLI
         shell: pwsh
         run: |
-          $base = 'https://github.com/mihailinl/AstraPlugins/releases/download/cli-v0.4.0'
-          $archive = 'astra-plugin-0.4.0-windows-x64.zip'
+          $base = 'https://github.com/mihailinl/AstraPlugins/releases/download/cli-v0.5.0'
+          $archive = 'astra-plugin-0.5.0-windows-x64.zip'
           $tools = Join-Path $env:RUNNER_TEMP 'astra-cli'
           New-Item -ItemType Directory -Path $tools | Out-Null
           Invoke-WebRequest "$base/$archive" -OutFile (Join-Path $tools $archive)
@@ -92,9 +92,46 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
+  portable:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.lock
+      - name: Download and verify official Astra CLI
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          base=https://github.com/mihailinl/AstraPlugins/releases/download/cli-v0.5.0
+          archive=astra-plugin-0.5.0-linux-x64-musl.tar.gz
+          curl -fsSLO "$base/$archive"
+          curl -fsSLO "$base/SHA256SUMS.txt"
+          sha256sum --check --ignore-missing SHA256SUMS.txt
+          tar xzf "$archive"
+          echo "ASTRA_CLI=$RUNNER_TEMP/astra-plugin-0.5.0-linux-x64-musl/astra-plugin" >> "$GITHUB_ENV"
+      - name: Build portable model manager
+        env:
+          COMPONENT_MIRROR_STATE: ${{ runner.temp }}/portable-state
+          COMPONENT_MIRROR_ASTRA_DATA: ${{ runner.temp }}/portable-astra-data
+        run: |
+          set -euo pipefail
+          python scripts/build_portable.py --cli "$ASTRA_CLI" --work-dir "$RUNNER_TEMP/portable-build" --output-dir dist
+          "$ASTRA_CLI" verify dist/*.astraplugin
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: portable-release
+          path: dist/*.astraplugin
+          if-no-files-found: error
+          retention-days: 7
+
   publish:
     if: github.ref_type == 'tag'
-    needs: build
+    needs: [build, portable]
     runs-on: ubuntu-24.04
     permissions:
       contents: write
@@ -105,18 +142,22 @@ jobs:
         with:
           name: windows-release
           path: dist
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
+        with:
+          name: portable-release
+          path: dist
       - name: Validate assets and derive checksum
         env:
           TAG: ${{ github.ref_name }}
         run: |
           set -euo pipefail
           [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
-          expected="component-mirror-${TAG#v}-windows-x64.astraplugin"
-          test "$(find dist -mindepth 1 -maxdepth 1 -type f | wc -l)" -eq 2
-          test -f "dist/$expected"
+          test "$(find dist -mindepth 1 -maxdepth 1 -type f | wc -l)" -eq 3
+          test -f "dist/component-mirror-${TAG#v}-windows-x64.astraplugin"
+          test -f "dist/component-mirror-${TAG#v}-noarch.astraplugin"
           test -f dist/README.md
-          (cd dist && sha256sum "$expected" > SHA256SUMS.txt)
-      - name: Attest Windows bundle
+          (cd dist && sha256sum *.astraplugin > SHA256SUMS.txt)
+      - name: Attest release bundles
         id: attest
         uses: actions/attest-build-provenance@96b4a1ef7235a096b17240c259729fdd70c83d45 # v2
         with:
